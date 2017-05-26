@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <button class="btn btn-default" onclick="location.href='{% url 'new_post' %}'">New Post</button>
     {% for post in posts %}
         <div class="row">
             <hr>
@@ -8,6 +9,7 @@
                 <a class="story-img" href="#">
                     <img src="http://placehold.it/100" style="width:100px; height: 100px; background-color: #12ABB2; color: #ffffff;" class="img-circle">
                 </a>
+
             </div>
             <div class="col-md-10 col-sm-9">
                 <h3>{{ post.title }}</h3>
